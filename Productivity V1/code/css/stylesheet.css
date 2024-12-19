@@ -1,0 +1,219 @@
+/* Generell */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; 
+}
+
+html {
+   height: 100%;
+}
+
+body { 
+   background-image: url(../../assets/img/to-do/Natureleavesbackground.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   font-size: 1rem;
+   font-family: sans-serif;
+}
+
+/* Oberen Dinge Date, Überschrift */
+.top-div {
+   display: flex; 
+   justify-content: center; 
+   align-items: center; 
+   width: 100%;
+   position: relative; 
+}
+
+.today-h1 {
+   background-color: #383838;
+   border: none;
+   color: #04AA6D;
+   padding: 1rem 2rem;
+   font-size: 1.25rem;
+   border-radius: 2rem;
+   height: auto; 
+   width: 8rem;
+   display: flex; 
+   justify-content: center;
+   align-items: center;
+   margin-top: 2rem;
+}
+
+.date {
+   position: absolute; 
+   left: 1rem; 
+   color: white;
+   background-color: #383838;
+   border: none;
+   padding: 1rem 1rem;
+   font-size: 1rem;
+   border-radius: 2rem;
+   height: auto;
+   width: min-content;
+   margin-top: 2rem;
+   text-align: center;
+}
+
+/* Completed Liste */
+.task-div {
+   background-color: #383838;
+   padding: 1rem 2rem;
+   font-size: 1rem;
+   border-radius: 25px;
+   height: 600px;
+   margin-top: 50px;
+   margin-left: 10px;
+   margin-right: 10px;
+   overflow: auto;
+   scrollbar-width: none;
+}
+
+.hidden {
+   display: none;
+}
+
+.collapsed {
+   display: none; 
+}
+
+#toggle-checked-list {
+   color: white;
+   font-size: 1.5rem;
+   background: transparent;
+   border: none;
+   cursor: pointer;
+}
+
+#toggle-checked-list::after {
+   content: var(--toggle-icon, "\21B5");
+   margin-left: 0.9rem;
+   font-size: 2rem;
+}
+
+#toggle-checked-list.collapsed::after {
+   content: var(--toggle-icon, "\21B4");
+   margin-left: 0.9rem;
+   font-size: 2rem;
+}
+
+/* Input Feld */
+.row { 
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background-color: #383838;
+   border-radius: 30px;
+   padding-left: 20px; 
+   margin-top: 40px;
+}
+
+.add-button {
+   border: 2px solid #000000;
+   outline: none;
+   padding: 16px 50px;
+   background: #05632c;
+   color: #fff;
+   font-size: 16px;
+   cursor: pointer;
+   border-radius: 40px;
+}
+
+.add-button:hover {
+   background: #04AA6D;
+}
+
+input {
+   flex: 1;
+   border: none;
+   outline: none;
+   background: transparent;
+   padding: 10px;
+   color: white;
+   font-size: 15px;
+   width: 100%;
+}
+
+/* Aufgaben Liste */
+ul {
+   margin: 0;
+   padding: 0;
+}
+
+ul li {
+   list-style: none;
+   font-size: 1.1rem;
+   color: #04AA6D;
+   background-color: #2c2b2b;
+   padding: 0.75rem 4.375rem;
+   user-select: none;
+   cursor: pointer;
+   position: relative;
+   display: block; 
+   word-wrap: break-word;
+   white-space: normal; 
+   border: 2px solid #04AA6D;
+   border-radius: 15px;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+}
+
+ul li::before {
+   content: '';
+   position: absolute;
+   height: 25px;
+   width: 25px;
+   border-radius: 50%;
+   background-image: url(../../assets/img/to-do/checkboxunchecked.png);
+   background-size: cover;
+   background-position: center;
+   top: 12px;
+   left: 8px;
+}
+
+ul li:hover {
+   background-color: #353434;
+}
+
+ul li.checked {
+   text-decoration: line-through;
+   color: grey;
+}
+
+ul li.checked::before {
+   background-image: url(../../assets/img/to-do/checkboxchecked.png);
+}
+
+ul li .removeSpan {
+   position: absolute;
+   right: 0;
+   top: 5px;
+   width: 40px;
+   height: 40px;
+   font-size: 20px;
+   line-height: 40px;
+   text-align: center;
+   border-radius: 50%;
+}
+
+ul li .settingsSpan {
+   position: absolute;
+   right: 0;
+   top: 5px;
+   width: 40px;
+   height: 40px;
+   font-size: 20px;
+   line-height: 40px;
+   text-align: center;
+   border-radius: 50%;
+   margin-right: 2rem;
+}
+
+ul li .removeSpan:hover, ul li .settingsSpan:hover {
+   background-color: #2b2a2a;
+}
+

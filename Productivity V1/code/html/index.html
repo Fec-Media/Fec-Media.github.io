@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Productivity To-Do</title>
+    <link rel="icon" href="../../assets/img/to-do/Websitelogo.png" type="image/png">
+
+    <link rel="stylesheet" href="../css/stylesheet.css">
+</head>
+
+<body>
+   
+ <div class="top-div">
+    <h1 class="today-h1">Today</h1>
+    <div class="date"></div>
+ </div>
+
+ <div class="task-div">
+    <ul id="list-container"></ul>
+    <button id="toggle-checked-list">Completed</button>
+    <ul id="checked-list-container"></ul>   
+</div>
+
+ <div class="row">
+     <input type="text" id="input-box" placeholder="Add new Task">
+     <button class="add-button" onclick="addtask()">Add</button>
+ </div>
+
+ <script src="../js/script.js" defer></script>
+</body>
+</html>
