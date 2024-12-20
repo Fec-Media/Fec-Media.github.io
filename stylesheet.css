@@ -391,4 +391,10 @@ footer {
     background-color: #1d1b19; 
 }
 
+a {
+    color: #cb6b0d;
+}
 
+a:hover {
+    color: #f4f4f4;
+}
