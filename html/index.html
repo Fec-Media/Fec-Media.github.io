@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fec-Media</title>
+    <script>
+        // Sprache des Benutzers ermitteln
+        const userLang = navigator.language || navigator.userLanguage;
+        const lang = userLang.slice(0, 2).toLowerCase();  // Nur die ersten zwei Buchstaben (z. B. "de" oder "en")
+
+        // Weiterleitung zur richtigen Seite basierend auf der Sprache
+        if (lang === 'de') {
+            window.location.href = 'index-de.html';  // Deutsche Seite
+        } else {
+            window.location.href = 'index-en.html';  // Englische Seite
+        }
+    </script>
+</head>
+<body>
+    <!-- Hier kann eine "Warten"-Meldung angezeigt werden -->
+    <p>Redirecting...</p>
+</body>
+</html>
