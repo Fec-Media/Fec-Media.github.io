@@ -1,0 +1,196 @@
+/* Grundlegende Einstellungen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Arial', sans-serif;
+    background-color: #141414;
+    color: #fff;
+    height: 100%;
+    line-height: 1.6;
+}
+
+/* Footer-Stil */
+footer {
+    height: 6rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #1A1A1A;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0; /* Dünnerer Footer */
+    font-size: 0.9rem; /* Kleinere Schrift im Footer */
+    z-index: 10; /* Sicherstellen, dass der Footer immer sichtbar ist */
+}
+
+/* Footer Links */
+footer a {
+    color: #cb6b0d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Hauptcontainer für den Inhalt */
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    margin-bottom: 60px; /* Platz für den fixierten Footer */
+}
+
+/* Überschriften-Stil */
+h1, h2 {
+    color: #cb6b0d;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Absätze im Impressum */
+p {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 1.5rem;
+}
+
+/* Links im Impressum */
+a {
+    color: #cb6b0d;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Liste im Impressum */
+ul {
+    list-style-type: none;
+    margin: 20px 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+ul li a {
+    color: #cb6b0d;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Layout für Links und Buttons */
+.link-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.link-section a {
+    background-color: #cb6b0d;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.link-section a:hover {
+    background-color: #b4afaf;
+}
+
+/* Abschnitts-Stil */
+.section {
+    margin-bottom: 2rem;
+}
+
+/* Header für Impressum und Datenschutz-Seiten */
+header {
+    text-align: center;
+    background-color: #1f1f1f;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #cb6b0d;
+}
+
+/* Verbesserte allgemeine Link-Stile */
+a {
+    color: #cb6b0d;
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+/* Visuelle Struktur für die Seiten */
+.content {
+    margin-top: 30px;
+}
+
+h1, h2, p {
+    margin-bottom: 20px;
+}
+
+/* Responsives Design für mobile Geräte */
+@media screen and (max-width: 768px) {
+    html, body {
+        font-size: 14px; /* Kleinere Schriftgröße für Handys */
+    }
+
+    /* Container für kleineren Bildschirm */
+    .container {
+        padding: 10px;
+        margin-bottom: 60px; /* Platz für den fixierten Footer */
+    }
+
+    h1 {
+        font-size: 2rem; /* Kleinere Schriftgröße für Header */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Kleinere Schriftgröße für Unterüberschrift */
+    }
+
+    footer {
+        font-size: 0.8rem; /* Noch kleinere Schriftgröße im Footer */
+    }
+
+    footer a {
+        font-size: 0.9rem; /* Kleinere Links im Footer */
+    }
+
+    .link-section {
+        flex-direction: column; /* Links untereinander anordnen auf kleinen Bildschirmen */
+        align-items: center;
+    }
+}
